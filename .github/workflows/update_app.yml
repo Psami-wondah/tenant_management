@@ -12,6 +12,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Update
+        working-directory: /home/frappe-bench
         run: |
           bench update
           bench update --pull
@@ -26,6 +27,7 @@ jobs:
       - build
 
     steps:
+      working-directory: /home/frappe-bench
       name: Restart Bench
       run: |
         bench restart
