@@ -10,7 +10,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
       - name: Update
         working-directory: /home/frappe/frappe-bench
         run: |
