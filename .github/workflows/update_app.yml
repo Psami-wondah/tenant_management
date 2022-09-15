@@ -15,7 +15,7 @@ jobs:
         run: |
           bench update --pull
           bench update --patch
-          bench update --requirements
+
   run:
     runs-on: self-hosted
 
