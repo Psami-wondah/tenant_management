@@ -1,0 +1,31 @@
+name: Update App
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Update
+        run: |
+          bench update
+          bench update --pull
+          bench update --patch
+          bench update --build
+          bench update --bench
+          bench update --requirements
+  run:
+    runs-on: self-hosted
+
+    needs:
+      - build
+
+    steps:
+      name: Restart Bench
+      run: |
+        bench restart
