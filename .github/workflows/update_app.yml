@@ -14,12 +14,7 @@ jobs:
       - name: Update
         working-directory: /home/frappe/frappe-bench
         run: |
-          bench update
           bench update --pull
-          bench update --patch
-          bench update --build
-          bench update --bench
-          bench update --requirements
   run:
     runs-on: self-hosted
 
