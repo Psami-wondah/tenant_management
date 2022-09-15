@@ -27,7 +27,7 @@ jobs:
       - build
 
     steps:
-      working-directory: /home/frappe-bench
-      name: Restart Bench
-      run: |
-        bench restart
+      - name: Restart Bench
+        working-directory: /home/frappe-bench
+        run: |
+          bench restart
