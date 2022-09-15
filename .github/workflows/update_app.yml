@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Update
-        working-directory: /home/frappe-bench
+        working-directory: /home/frappe/frappe-bench
         run: |
           bench update
           bench update --pull
@@ -28,6 +28,6 @@ jobs:
 
     steps:
       - name: Restart Bench
-        working-directory: /home/frappe-bench
+        working-directory: /home/frappe/frappe-bench
         run: |
           bench restart
