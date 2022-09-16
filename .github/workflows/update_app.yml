@@ -10,16 +10,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Uninstall App
-        working-directory: /home/frappe/frappe-bench/apps
-        run: |
-          rm -rf tenant_management
 
       - name: Update
         working-directory: /home/frappe/frappe-bench
         run: |
-          bench get-app https://github.com/Psami-wondah/tenant_management
-          bench setup requirements --dev
+          bench update --pull
           bench update --patch
 
   run:
