@@ -1,15 +1,21 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
- "autoname": "HOUSE.#####",
- "creation": "2022-09-15 11:59:57.351198",
+ "autoname": "format:HOUSE-{MM}-{#####}",
+ "creation": "2022-09-15 14:25:11.463048",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "house_name",
   "location",
   "agent",
-  "owner"
+  "house_owner",
+  "image",
+  "route",
+  "published",
+  "description"
  ],
  "fields": [
   {
@@ -28,17 +34,48 @@
    "reqd": 1
   },
   {
-   "fieldname": "owner",
+   "fieldname": "house_owner",
    "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Owner",
-   "options": "Owner",
+   "label": "House Owner",
+   "options": "House Owner",
    "reqd": 1
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Image"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  },
+  {
+   "fieldname": "house_name",
+   "fieldtype": "Data",
+   "label": "House Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
   }
  ],
+ "has_web_view": 1,
+ "image_field": "image",
  "index_web_pages_for_search": 1,
+ "is_published_field": "published",
  "links": [],
- "modified": "2022-09-15 12:02:48.989670",
+ "modified": "2022-09-16 09:16:22.625164",
  "modified_by": "Administrator",
  "module": "Tenant Management",
  "name": "House",
@@ -58,6 +95,7 @@
    "write": 1
   }
  ],
+ "route": "houses",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

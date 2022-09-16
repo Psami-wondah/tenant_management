@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "RENT-PAYMENT-.#####",
+ "creation": "2022-09-15 14:34:41.766265",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tenant",
+  "house",
+  "amount",
+  "rental_agreement",
+  "rent_payment_system"
+ ],
+ "fields": [
+  {
+   "fetch_from": "rental_agreement.tenant",
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant",
+   "options": "Tenant",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "rental_agreement.house",
+   "fieldname": "house",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "House",
+   "options": "House",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fetch_from": "rental_agreement.amount",
+   "fieldname": "amount",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "rental_agreement",
+   "fieldtype": "Link",
+   "label": "Rental Agreement",
+   "options": "Rental Agreement",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "rental_agreement.rent_payment_system",
+   "fieldname": "rent_payment_system",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Rent Payment System",
+   "read_only": 1,
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-09-16 10:55:34.321604",
+ "modified_by": "Administrator",
+ "module": "Tenant Management",
+ "name": "Rent Payment",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

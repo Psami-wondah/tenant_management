@@ -1,14 +1,17 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "OWNER.#####",
- "creation": "2022-09-15 10:51:30.644172",
+ "autoname": "format:OWNER-{MM}-{first_name}-{last_name}-{#####}",
+ "creation": "2022-09-15 15:04:33.482493",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "first_name",
-  "last_name"
+  "last_name",
+  "image",
+  "email",
+  "phone_number"
  ],
  "fields": [
   {
@@ -24,15 +27,32 @@
    "in_list_view": 1,
    "label": "Last Name",
    "reqd": 1
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Image"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
   }
  ],
+ "image_field": "image",
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-09-15 10:51:30.644172",
+ "modified": "2022-09-16 09:00:46.604880",
  "modified_by": "Administrator",
  "module": "Tenant Management",
- "name": "Owner",
- "naming_rule": "Expression (old style)",
+ "name": "House Owner",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

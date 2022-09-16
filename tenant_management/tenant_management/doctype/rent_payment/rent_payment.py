@@ -4,5 +4,5 @@
 # import frappe
 from frappe.model.document import Document
 
-class Owner(Document):
+class RentPayment(Document):
 	pass

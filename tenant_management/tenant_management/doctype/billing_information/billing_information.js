@@ -1,7 +1,7 @@
 // Copyright (c) 2022, Owhondah Okechukwu Samuel and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('Owner', {
+frappe.ui.form.on('Billing Information', {
 	// refresh: function(frm) {
 
 	// }
