@@ -10,11 +10,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Uninstall App
+      - name: Pull
         working-directory: /home/frappe/frappe-bench/apps/tenant_management
         run: |
-          git add .
-          git commit -m "I wan pull"
           git pull origin main
 
       - name: Update
